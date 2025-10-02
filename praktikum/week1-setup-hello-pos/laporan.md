@@ -111,11 +111,14 @@ Screenshot 2025-10-01 123337.png
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+
+Dari perbandingan ketiga paradigma pemrograman (Prosedural, OOP, dan Fungsional) dapat disimpulkan bahwa masing-masing memiliki kelebihan dan kekurangan sesuai kebutuhan aplikasi.
+
+  a. Prosedural cocok untuk program sederhana, tetapi jika skala program membesar, maintainability dan scalability menjadi sulit.
+  b. OOP lebih unggul untuk sistem besar dan kompleks karena konsep objek, enkapsulasi, dan modularitas membuat aplikasi lebih mudah         dipelihara dan dikembangkan. Oleh karena itu, OOP lebih sesuai untuk aplikasi seperti POS (Point of Sale).
+  c. Fungsional menawarkan kode yang ringkas, minim efek samping, serta mendukung paralelisme, sehingga cocok untuk pemrosesan data          besar dan dapat mengurangi boilerplate code dengan memanfaatkan fungsi murni, lambda, dan higher-order function.
+Dengan demikian, pemilihan paradigma harus menyesuaikan kebutuhan: untuk aplikasi kecil bisa menggunakan prosedural, untuk aplikasi kompleks lebih tepat OOP, dan untuk pemrosesan data intensif lebih cocok fungsional.
+
 ---
 
 ## Kesimpulan
