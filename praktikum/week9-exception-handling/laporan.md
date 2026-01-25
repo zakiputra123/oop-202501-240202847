@@ -79,7 +79,7 @@ try {
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/Screenshot 2025 12  26.png)
+![Screenshot hasil](screenshots/praktikum/week9-exception-handling/Screenshot 2025 12  26 .png)
 )
 ---
 
