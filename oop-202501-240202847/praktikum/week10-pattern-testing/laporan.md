@@ -2,72 +2,109 @@
 Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : [Zaki Saputra]
+- NIM   : [240202847]
+- Kelas : [3IKRA]
+
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+(
+1. Mahasiswa memahami dan mampu mengimplementasikan Singleton Pattern untuk menjamin instansi tunggal pada objek global.
+
+2. Mahasiswa mampu menerapkan arsitektur Model-View-Controller (MVC) untuk memisahkan logika bisnis, data, dan tampilan.
+
+3. Mahasiswa mampu membuat dan menjalankan pengujian mandiri menggunakan framework JUnit.
+
+4. Mahasiswa mampu menganalisis pengaruh penerapan pola desain terhadap kemudahan pemeliharaan kode (maintainability).)
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+(
+1. Singleton Pattern: Pola yang membatasi pembuatan objek dari suatu class menjadi satu instansi saja. Biasanya digunakan untuk manajemen koneksi database atau konfigurasi aplikasi.
+
+2. MVC (Model-View-Controller): Pola arsitektur yang membagi aplikasi menjadi tiga bagian:
+
+- Model: Mengelola data dan aturan bisnis.
+
+- View: Mengelola representasi visual/tampilan (output).
+
+3. Controller: Menerima input dan menjembatani interaksi antara Model dan View.)
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+(
+1. Implementasi Singleton: Membuat class DatabaseConnection di package config dengan constructor privat agar tidak bisa di-instansiasi dari luar.
+
+2. Penerapan MVC:
+
+- Membuat Product.java (Model) untuk menyimpan data.
+
+- Membuat ConsoleView.java (View) untuk mencetak pesan ke terminal.
+
+- Membuat ProductController.java (Controller) untuk mengontrol aliran data dari model ke view.
+
+3. Integrasi Sistem: Menjalankan AppMVC.java sebagai titik masuk aplikasi yang menggabungkan ketiga komponen MVC.
+
+4. Pembuatan Unit Test: Membuat class ProductTest.java di folder src/test menggunakan library JUnit 5 untuk memvalidasi apakah getter pada Model berjalan dengan benar.
+
+5. Running Test: Menjalankan test runner di IDE (seperti IntelliJ atau VS Code) dan memastikan muncul indikator "Green Bar" (Lulus).)
 
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+(// Contoh Implementasi Singleton
+public class DatabaseConnection {
+    private static DatabaseConnection instance;
+    private DatabaseConnection() {} // Constructor Privat
+    public static DatabaseConnection getInstance() {
+        if (instance == null) instance = new DatabaseConnection();
+        return instance;
+    }
+}
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
+// Contoh Unit Test
+@Test
+public void testProductName() {
+    Product p = new Product("P01", "Benih Jagung");
+    assertEquals("Benih Jagung", p.getName()); // Validasi
+}
 )
 ---
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
+Screenshot 2026-01-14 at 07.00.03.png
+Screnshots-2026-01-14-at-07.00.03.png
 )
 ---
 
 ## Analisis
 (
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
+- Analisis Singleton: Dengan Singleton, kita menjamin efisiensi memori karena tidak ada pembuatan objek koneksi database yang berulang-ulang.
+
+- Analisis MVC: Pemisahan ini sangat membantu. Jika di masa depan kita ingin mengubah tampilan dari Console ke GUI (Swing/JavaFX), kita hanya perlu mengganti bagian View saja tanpa menyentuh logika di Model.
+
+- Analisis Testing: JUnit memberikan jaminan bahwa perubahan kecil pada kode tidak akan merusak fungsi utama. Jika getName() tiba-tiba mengembalikan nilai salah, test akan langsung gagal (Red Bar).
+
+- Kendala: Kesulitan dalam mengatur classpath untuk library JUnit. Kendala diatasi dengan menambahkan dependensi JUnit di file konfigurasi proyek (seperti pom.xml atau menambahkan JAR secara manual).  
 )
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+(Penerapan Design Pattern dan Unit Testing secara signifikan meningkatkan kualitas perangkat lunak. MVC membuat kode lebih rapi dan modular, Singleton menjaga konsistensi objek global, dan JUnit memastikan kode tetap andal selama proses pengembangan.)
 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+(1. [Mengapa constructor pada Singleton harus bersifat private?]  
+   **Agar class tersebut tidak bisa diinstansiasi (dibuat objeknya) menggunakan kata kunci new dari class lain. Akses hanya diizinkan melalui method getInstance().** …  
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2. [Jelaskan manfaat pemisahan Model, View, dan Controller]  
+   **Manfaatnya adalah memudahkan pemeliharaan kode (maintenance), memungkinkan kolaborasi tim yang lebih baik (misal: satu orang fokus di UI, satu di logika), serta meningkatkan kemampuan reusability kode.** …  
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3. [Apa peran unit testing dalam menjaga kualitas perangkat lunak?]  
+   **Sebagai jaring pengaman untuk mendeteksi bug sedini mungkin sebelum aplikasi masuk ke tahap produksi atau tahap pengujian yang lebih luas.** …  )

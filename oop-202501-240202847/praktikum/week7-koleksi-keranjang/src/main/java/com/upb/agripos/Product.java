@@ -1,3 +1,4 @@
+
 package com.upb.agripos;
 
 import java.util.Objects;
@@ -6,24 +7,18 @@ public class Product {
     private final String code;
     private final String name;
     private final double price;
-    private int stock;
 
-    public Product(String code, String name, double price, int stock) {
+    public Product(String code, String name, double price) {
         this.code = code;
         this.name = name;
         this.price = price;
-        this.stock = stock;
     }
 
     public String getCode() { return code; }
     public String getName() { return name; }
     public double getPrice() { return price; }
-    public int getStock() { return stock; }
-    
-    public void reduceStock(int qty) { 
-        this.stock -= qty; 
-    }
 
+    // Override equals & hashCode agar Map/Set bisa mengenali produk yang sama
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

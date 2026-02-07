@@ -2,72 +2,93 @@
 Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : [Zaki Saputra]
+- NIM   : [240202847]
+- Kelas : [3IKRA]
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+(
+1. Mahasiswa memahami dan mampu mengimplementasikan konsep pewarisan (Inheritance) dalam pemrograman berorientasi objek.)
 
+2. Mahasiswa mampu membedakan peran Superclass dan Subclass.
+
+3. Mahasiswa mampu menggunakan kata kunci super untuk mengakses konstruktor maupun method pada induk class.
+
+4. Mahasiswa mampu membangun hierarki class yang terstruktur pada studi kasus Agri-POS
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+(
+1. Inheritance: Mekanisme yang memungkinkan sebuah class (subclass) mewarisi atribut dan method dari class lain (superclass).
+
+2. Reusability: Keuntungan utama inheritance adalah menghindari duplikasi kode dengan meletakkan atribut umum di superclass.
+
+3. Keyword extends: Digunakan untuk mendeklarasikan bahwa sebuah class merupakan turunan dari class lain.
+
+4. Keyword super: Digunakan untuk memanggil konstruktor atau method yang berada di dalam superclass.)
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+(
+1. Reuse Superclass: Menggunakan kembali class Produk.java sebagai induk dari semua kategori produk.
+
+2. Pembuatan Subclass: Membuat tiga file baru yaitu Benih.java, Pupuk.java, dan AlatPertanian.java yang semuanya melakukan extends ke class Produk.
+
+3. Penambahan Atribut Spesifik: Menambahkan atribut unik di setiap subclass, seperti varietas pada Benih, jenis pada Pupuk, dan material pada AlatPertanian.
+
+4. Eksekusi Program: Membuat MainInheritance.java untuk melakukan instansiasi objek dari setiap subclass dan menampilkan datanya.
+
+5. Version Control: Melakukan commit dengan pesan week3-inheritance dan melakukan push ke repositori GitHub.)
 
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+(// Contoh penggunaan Inheritance di Benih.java
+public class Benih extends Produk {
+    private String varietas;
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
+    public Benih(String kode, String nama, double harga, int stok, String varietas) {
+        super(kode, nama, harga, stok); // Memanggil konstruktor Produk
+        this.varietas = varietas;
+    }
+}
+
+// Contoh Instansiasi di MainInheritance.java
+Benih b = new Benih("BNH-001", "Benih Padi IR64", 25000, 100, "IR64");
+System.out.println("Produk: " + b.getNama() + " | Varietas: " + b.getVarietas());
 )
 ---
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
+![Screenshot hasil] (screenshots/Screenshots-2025-12-25.png)
 )
 ---
 
 ## Analisis
 (
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
+- Cara Kerja Kode: Saat objek Benih dibuat, konstruktor Benih memanggil konstruktor Produk melalui super(). Hal ini memungkinkan atribut umum (kode, nama, harga) terisi sekaligus atribut spesifik (varietas) diatur di dalam subclass tersebut.
+
+- Perbedaan Pendekatan: Minggu lalu kita membuat objek langsung dari class tunggal. Minggu ini, kita menggunakan hierarki. Jika ada atribut baru yang berlaku untuk semua produk (misal: diskon), kita cukup menambahkannya di class Produk saja, tidak perlu di setiap file.
+
+- Kendala: Memahami urutan pemanggilan super() yang harus diletakkan di baris pertama dalam konstruktor. Kendala ini diatasi dengan mengikuti aturan sintaks Java yang mewajibkan konstruktor induk dipanggil sebelum inisialisasi atribut anak.  
 )
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+(Dengan menerapkan Inheritance, struktur kode program Agri-POS menjadi jauh lebih efisien dan reusable. Kita tidak perlu menulis ulang atribut yang sama pada setiap jenis produk, cukup mewarisinya dari class induk Produk.)
 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+(1. [Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?]  
+   **Keuntungannya adalah code reusability (menghindari duplikasi kode), mempermudah pemeliharaan program (cukup ubah di satu tempat), dan memungkinkan penggunaan polimorfisme di tahap pengembangan selanjutnya.** …  
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2. [Bagaimana cara subclass memanggil konstruktor superclass?]  
+   **Menggunakan kata kunci super() yang diikuti dengan argumen yang sesuai di dalam konstruktor subclass. Pemanggilan ini harus dilakukan di baris pertama kode konstruktor.** … 
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3. [Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.]  
+   **Contohnya adalah class ObatPertanian (atribut tambahan: dosis/kadar kimia) atau LayananJasa (atribut tambahan: durasi sewa alat/tenaga).** …  )
