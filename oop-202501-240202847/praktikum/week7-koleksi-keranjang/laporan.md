@@ -89,10 +89,10 @@ Screenshots 2025 12 26 .png
 
 ## Quiz
 (1. [Jelaskan perbedaan mendasar antara List, Map, dan Set?]  
-   **List adalah koleksi terurut yang boleh duplikat. Map menyimpan pasangan kunci-nilai. Set adalah koleksi yang tidak boleh ada duplikasi data.** …  
+    **Jawaban:List bersifat terurut dan dapat menyimpan data duplikat, Map menyimpan data dalam bentuk pasangan key–value, sedangkan Set tidak mengizinkan data duplikat.** …  
 
 2. [Mengapa ArrayList cocok digunakan untuk keranjang belanja sederhana?]  
-   **Karena mudah digunakan untuk menambah dan mengurangi item secara dinamis tanpa perlu mengatur memori secara manual seperti pada array biasa.** …  
+   **Jawaban:Karena ArrayList bersifat dinamis, mudah digunakan, dan mendukung penyimpanan data duplikat.**
 
 3. [Bagaimana struktur Set mencegah duplikasi data?]  
-   **Set menggunakan mekanisme hashing dan metode equals() untuk memeriksa apakah objek yang baru dimasukkan sudah ada di dalam koleksi atau belum.** …  )
+     **Jawaban:Set menggunakan mekanisme hashing atau perbandingan objek untuk menolak elemen yang sama.** …  )

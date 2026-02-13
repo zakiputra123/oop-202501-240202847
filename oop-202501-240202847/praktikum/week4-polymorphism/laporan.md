@@ -91,11 +91,11 @@ for (Produk p : daftarProduk) {
 ---
 
 ## Quiz
-(1. [Apa perbedaan overloading dan overriding?]  
-   **Overloading terjadi dalam satu class yang sama dengan nama method sama tapi parameter berbeda (compile-time). Overriding terjadi pada hubungan pewarisan di mana subclass mengganti isi method superclass dengan parameter yang identik (runtime).** …  
+(1. Apa perbedaan overloading dan overriding? 
+   **Jawaban:*Overloading adalah tentang variasi input di satu kelas, sementara Overriding adalah tentang perubahan perilaku dalam konteks pewarisan* …  
 
-2. [Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?]  
-   **Java melihat tipe objek aktual yang dibuat di memori (menggunakan kata kunci new), bukan melihat tipe variabel referensinya.** …  
+2.  Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?   
+   **Jawaban:*Dynamic binding hanya terjadi pada method yang non-statis, non-final, dan non-private ketika dipanggil melalui referensi superkelas yang menunjuk ke objek subkelas.* …  
 
-3. [Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.]  
-   **Sistem pembayaran. Superclass Pembayaran memiliki method prosesBayar(). Subclass-nya seperti Cash, KartuKredit, dan EWallet akan meng-override method tersebut dengan cara verifikasi yang berbeda-beda.** …  )
+3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.   
+   **Jawaban:* MenuItem bisa memiliki subclass seperti Makanan, Minuman, dan Dessert. Masing-masing subclass dapat meng-override method getInfo() untuk menampilkan detail menu spesifik seperti bahan, ukuran porsi, atau suhu penyajian. Saat daftar menu ditampilkan menggunakan array MenuItem[], Java akan memanggil method getInfo() yang sesuai dengan tipe objek aktualnya* …  )

@@ -80,14 +80,13 @@ CreditBy.print("240202847", "Zaki  Saputra");
 ## Kesimpulan
 (Penggunaan konsep Class dan Object memungkinkan representasi dunia nyata (seperti produk pertanian) ke dalam program secara terstruktur. Dengan enkapsulasi, keamanan data lebih terjamin karena akses variabel dikontrol secara ketat melalui method.*)
 
----
-
 ## Quiz
 (1. [Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?]  
-   **Untuk menerapkan prinsip enkapsulasi, sehingga data tidak dapat diubah secara sembarangan dari luar class yang dapat menyebabkan error atau ketidakkonsistenan data:** …  
+   **Agar data tidak dapat diakses langsung dari luar class dan hanya dapat dimodifikasi melalui method khusus getter dan setter, sehingga menjaga keamanan dan konsistensi data.**
+ …  
 
 2. [Apa fungsi getter dan setter dalam enkapsulasi?]  
-   **Getter berfungsi untuk mengambil atau membaca nilai dari atribut privat, sedangkan Setter berfungsi untuk mengisi atau mengubah nilai atribut tersebut dengan validasi tertentu.:** …  
+   **Getter digunakan untuk mengambil nilai atribut, sedangkan setter digunakan untuk mengubah nilai atribut secara terkontrol**…  
 
-3. [Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?]  
-   **Class Produk menjadi fondasi untuk fitur lain seperti transaksi penjualan, manajemen inventaris, dan laporan keuangan, karena data produk sudah terorganisir dalam satu modul yang bisa dipanggil berulang kali.:** …  )
+3. [Bagaimana class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?]  
+   **Class Produk menjadi dasar model data untuk aplikasi POS karena dapat diperluas dengan fitur tambahan seperti kategori, diskon, transaksi, atau manajemen stok otomatis tanpa perlu mengubah struktur utama program.** …  )

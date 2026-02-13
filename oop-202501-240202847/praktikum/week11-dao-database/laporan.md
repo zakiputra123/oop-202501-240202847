@@ -97,11 +97,11 @@ dao.insert(new Product("P01", "Pupuk Organik", 25000, 10));
 ---
 
 ## Quiz
-(1. [Apa perbedaan antara Statement dan PreparedStatement dalam JDBC? Mengapa PreparedStatement lebih disarankan?]  
-   **Statement: Digunakan untuk eksekusi query SQL statis tanpa parameter. Query dikirim langsung ke database setiap kali dijalankan.** …  
+(1. Apa fungsi utama DAO dalam aplikasi OOP?
+   **Jawaban:**Memisahkan logika akses data dari logika bisnis agar kode lebih terstruktur dan mudah dipelihara.  
 
-2. [Mengapa kita perlu membuat Interface untuk DAO (misal: ProductDAO) sebelum membuat class implementasinya (ProductDAOImpl)?]  
-   **Penggunaan Interface bertujuan untuk Abstraksi dan Loose Coupling. Dengan Interface, logika bisnis aplikasi hanya tahu "apa saja" operasi yang tersedia (seperti insert atau delete) tanpa perlu tahu "bagaimana" teknis penyimpanannya. Jika suatu saat kita ingin mengganti database dari PostgreSQL ke MySQL atau bahkan ke teknologi Cloud, kita cukup membuat implementasi baru tanpa mengubah kode di level aplikasi utama.** …  
+2. Mengapa PreparedStatement lebih disarankan dibanding Statement?
+   **Jawaban:**Karena lebih aman dari SQL Injection dan meningkatkan performa query.  
 
-3. [Apa fungsi dari ResultSet dalam operasi SELECT?]  
-   **ResultSet adalah objek yang menampung baris-baris data hasil eksekusi query dari database. Kita dapat membayangkan ResultSet sebagai tabel virtual di memori Java yang memiliki kursor. Kita menggunakan method .next() untuk menggerakkan kursor ke baris berikutnya dan method seperti .getString() atau .getInt() untuk mengambil nilai dari kolom tertentu pada baris tersebut.** …  )
+3. Sebutkan operasi CRUD!  
+   **Jawaban:**Create, Read, Update, dan Delete.  )

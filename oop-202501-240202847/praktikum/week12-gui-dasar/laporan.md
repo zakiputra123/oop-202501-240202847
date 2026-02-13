@@ -95,11 +95,11 @@ btnAdd.setOnAction(event -> {
 ---
 
 ## Quiz
-(1. [Apa yang dimaksud dengan Event-Driven Programming dan bagaimana perbedaannya dengan pemrograman prosedural yang biasa dipelajari di awal?]  
-   **Dalam pemrograman prosedural, alur program ditentukan oleh urutan baris kode yang ditulis oleh pemrogram (linear). Sedangkan dalam Event-Driven Programming, alur program ditentukan oleh tindakan pengguna (user actions) seperti klik tombol, gerakan mouse, atau input keyboard. Program berada dalam kondisi "menunggu" (listening) dan baru akan mengeksekusi blok kode tertentu (handler) ketika peristiwa (event) terjadi.** …  
+(1. Apa yang dimaksud dengan event-driven programming? 
+   **Jawaban:** Paradigma pemrograman yang alur eksekusinya dipicu oleh event seperti klik tombol atau input pengguna.
 
-2. [Apa peran dari Layout Pane (seperti VBox, HBox, atau GridPane) dalam JavaFX?]  
-   **Layout Pane berfungsi sebagai kontainer yang mengatur posisi dan tata letak elemen-elemen UI (Nodes) secara otomatis. Tanpa Layout Pane, kita harus mengatur koordinat X dan Y setiap elemen secara manual, yang akan menyulitkan ketika jendela aplikasi diubah ukurannya (resize).** …  
+2.Mengapa GUI tidak boleh memanggil DAO secara langsung? 
+   **Jawaban:** Agar tidak melanggar prinsip DIP dan menjaga pemisahan tanggung jawab antar layer aplikasi. 
 
-3. [Mengapa di dalam Event Handler tombol "Tambah", kita sangat disarankan memanggil ProductService dan bukan langsung memanggil ProductDAO?]  
-   **Hal ini dilakukan untuk mematuhi prinsip DIP (Dependency Inversion Principle) dan Separation of Concerns. ProductService berfungsi sebagai lapisan logika bisnis. Jika suatu saat ada aturan tambahan (misal: "produk tidak boleh ditambah jika stok di gudang penuh"), kita cukup mengubahnya di Service tanpa menyentuh kode UI atau DAO. Ini membuat kode lebih modular dan mudah diuji** …  )
+3. Sebutkan komponen utama MVC pada praktikum ini! 
+   **Jawaban:** Model (Product), View (JavaFX Form), Controller (ProductController), dan Service (ProductService).  )

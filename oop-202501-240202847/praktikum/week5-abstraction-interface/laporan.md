@@ -95,11 +95,11 @@ public class EWallet extends Pembayaran implements Validatable, Receiptable {
 ---
 
 ## Quiz
-(1. [Jelaskan perbedaan konsep dan penggunaan abstract class dan interface?]  
-   **Abstract class digunakan untuk class yang memiliki hubungan kekerabatan erat dan ingin berbagi atribut/state. Interface digunakan sebagai kontrak kemampuan yang bisa diterapkan pada class mana saja tanpa mempedulikan hierarki class-nya.** …  
+(1. Apa perbedaan antara class abstrak dan interface dalam Java?  
+   **Jawaban:*Class abstrak dapat memiliki atribut dan metode dengan implementasi, sedangkan interface hanya dapat memiliki deklarasi metode (tanpa implementasi, kecuali default atau static). Class dapat meng-extend satu class abstrak, tetapi dapat mengimplementasikan banyak interface.* …  
 
-2. [Mengapa multiple inheritance lebih aman dilakukan dengan interface pada Java?]  
-   **Karena interface hanya menyediakan tanda tangan method tanpa isi (sebelum Java 8), sehingga tidak ada risiko konflik implementasi (Diamond Problem) jika sebuah class mengambil method dari banyak sumber.** …  
+(2.Kapan sebaiknya menggunakan abstract class dibandingkan interface?
+   **Jawaban:*Abstract class digunakan ketika beberapa class memiliki kesamaan perilaku dan atribut, sedangkan interface digunakan ketika kita ingin mendefinisikan kontrak umum untuk berbagai class yang tidak memiliki hubungan langsung dalam hierarki pewarisan.* … ) 
 
-3. [Pada contoh Agri-POS, bagian mana yang paling tepat menjadi abstract class dan mana yang menjadi interface?]  
-   **Pembayaran paling tepat menjadi Abstract Class karena semua jenis pembayaran pasti punya invoiceNo dan total. Validatable paling tepat menjadi Interface karena tidak semua pembayaran butuh validasi (seperti Cash yang tidak butuh OTP).** …  )
+(3. Bagaimana penerapan polymorphism dalam penggunaan interface di praktikum  
+   **Jawaban:*Polymorphism terjadi saat objek dari berbagai class (Cash, EWallet, TransferBank) diperlakukan sama melalui tipe interface Receiptable. Masing-masing class memiliki implementasi berbeda dari metode cetakStruk(), namun dipanggil dengan cara yang sama.* …  )

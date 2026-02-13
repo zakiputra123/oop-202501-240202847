@@ -102,11 +102,11 @@ private void loadData() {
 ---
 
 ## Quiz
-(1. [Apa keuntungan menggunakan ObservableList dibandingkan ArrayList biasa pada JavaFX?]  
-   **ObservableList memiliki kemampuan untuk memberitahu UI secara otomatis jika ada perubahan data (seperti penambahan atau penghapusan elemen). Hal ini memungkinkan TableView untuk melakukan auto-refresh tampilan tanpa harus memanggil ulang fungsi render secara manual.** …  
+(1.Apa fungsi utama TableView pada JavaFX?
+   **Jawaban:** Menampilkan data berbasis objek dalam bentuk tabel yang terintegrasi dengan koleksi data.
 
-2. [Jelaskan peran PropertyValueFactory dalam konfigurasi TableColumn!]  
-   **PropertyValueFactory berfungsi untuk memetakan kolom tabel ke atribut yang ada pada class Model (Product). Ia secara otomatis akan memanggil metode getter (misal: getCode()) dari objek Model untuk ditampilkan isinya di kolom tersebut.** …  
+2. Mengapa digunakan lambda expression pada event handling?
+   **Jawaban:** Untuk menyederhanakan kode dan meningkatkan keterbacaan event handler.  
 
-3. [Mengapa penghapusan data di TableView juga harus diikuti dengan penghapusan di Database melalui DAO?]  
-   **Karena TableView hanyalah representasi sementara di memori aplikasi (View). Jika kita hanya menghapus di tabel saja, maka saat aplikasi dijalankan ulang, data tersebut akan muncul kembali karena masih ada di database (Persistence).** …  )
+3. Mengapa GUI tidak boleh memanggil DAO secara langsung?
+   **Jawaban:** Agar tetap mematuhi prinsip DIP dan menjaga pemisahan tanggung jawab antar layer aplikasi. )

@@ -84,11 +84,11 @@ System.out.println("Produk: " + b.getNama() + " | Varietas: " + b.getVarietas())
 ---
 
 ## Quiz
-(1. [Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?]  
-   **Keuntungannya adalah code reusability (menghindari duplikasi kode), mempermudah pemeliharaan program (cukup ubah di satu tempat), dan memungkinkan penggunaan polimorfisme di tahap pengembangan selanjutnya.** …  
+(1. Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?   
+   **Jawaban: Dengan inheritance, kode menjadi lebih efisien karena atribut dan method umum cukup ditulis sekali di superclass. Hal ini mengurangi duplikasi kode, memudahkan pemeliharaan, serta membuat hubungan antar class lebih jelas secara hierarkis.** …  
 
-2. [Bagaimana cara subclass memanggil konstruktor superclass?]  
-   **Menggunakan kata kunci super() yang diikuti dengan argumen yang sesuai di dalam konstruktor subclass. Pemanggilan ini harus dilakukan di baris pertama kode konstruktor.** … 
+2. Bagaimana cara subclass memanggil konstruktor superclass?    
+   **Jawaban:Subclass dapat memanggil konstruktor superclass menggunakan keyword super(...) di baris pertama konstruktor subclass, dengan menyertakan argumen yang sesuai dengan konstruktor superclass.** …  
 
-3. [Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.]  
-   **Contohnya adalah class ObatPertanian (atribut tambahan: dosis/kadar kimia) atau LayananJasa (atribut tambahan: durasi sewa alat/tenaga).** …  )
+3.Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass. 
+   **Jawaban: Contoh lainnya adalah Pestisida yang memiliki atribut tambahan seperti bahanAktif, atau BibitTernak dengan atribut spesies dan umur. Keduanya bisa menjadi subclass dari Produk dengan menyesuaikan method getKeterangan().** …  )

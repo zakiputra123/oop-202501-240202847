@@ -100,11 +100,13 @@ Screnshots-2026-01-14-at-07.00.03.png
 ---
 
 ## Quiz
-(1. [Mengapa constructor pada Singleton harus bersifat private?]  
-   **Agar class tersebut tidak bisa diinstansiasi (dibuat objeknya) menggunakan kata kunci new dari class lain. Akses hanya diizinkan melalui method getInstance().** …  
+(
+1. Mengapa constructor pada Singleton harus bersifat private? 
+   **Jawaban: Agar object tidak dapat dibuat langsung dari luar class dan hanya dapat diakses melalui method getInstance().** 
 
-2. [Jelaskan manfaat pemisahan Model, View, dan Controller]  
-   **Manfaatnya adalah memudahkan pemeliharaan kode (maintenance), memungkinkan kolaborasi tim yang lebih baik (misal: satu orang fokus di UI, satu di logika), serta meningkatkan kemampuan reusability kode.** …  
+2. Apa manfaat penerapan MVC?
+   **Jawaban: Agar kode lebih terstruktur, mudah dipelihara, dan memudahkan pengembangan serta pengujian.**
 
-3. [Apa peran unit testing dalam menjaga kualitas perangkat lunak?]  
-   **Sebagai jaring pengaman untuk mendeteksi bug sedini mungkin sebelum aplikasi masuk ke tahap produksi atau tahap pengujian yang lebih luas.** …  )
+3. Apa peran unit testing dalam pengembangan perangkat lunak?
+   **Jawaban: Untuk memastikan setiap bagian kecil dari program berjalan dengan benar dan mendeteksi bug sejak dini.**  
+   )

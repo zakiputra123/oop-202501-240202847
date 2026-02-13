@@ -101,11 +101,14 @@ try {
 ---
 
 ## Quiz
-(1. [Jelaskan perbedaan error dan exception?]  
-   **Error adalah masalah serius yang biasanya berkaitan dengan lingkungan sistem (seperti kehabisan memori) dan tidak disarankan untuk ditangkap. Exception adalah kondisi abnormal yang disebabkan oleh logika program (seperti pembagian nol atau input salah) dan dapat ditangani agar program tetap berjalan.** …  
+ Jelaskan perbedaan error dan exception.
+   **Jawaban:** Error adalah kesalahan fatal yang tidak dapat ditangani program, sedangkan exception adalah kesalahan yang masih dapat ditangani.
 
-2. [Apa fungsi finally dalam blok try–catch–finally?]  
-   **Untuk menjalankan kode penting yang harus tetap dieksekusi terlepas dari apakah pengecualian terjadi atau tidak.** …  
+2. Apa fungsi finally dalam blok try–catch–finally?
+   **Jawaban:** Finally digunakan untuk mengeksekusi kode yang selalu dijalankan, baik terjadi exception maupun tidak.
 
-3. [Mengapa custom exception diperlukan?]  
-   **Agar pesan kesalahan lebih spesifik dan sesuai dengan konteks aplikasi. Daripada menggunakan Exception umum, InsufficientStockException jauh lebih jelas memberikan informasi kepada pengembang dan pengguna.** …  )
+3. Mengapa custom exception diperlukan?
+   **Jawaban:** Custom exception diperlukan untuk menangani kesalahan spesifik sesuai kebutuhan bisnis agar program lebih jelas dan terkontrol.
+
+4. Berikan contoh kasus bisnis POS yang membutuhkan custom exception.
+   **Jawaban:** Contohnya ketika stok produk tidak mencukupi saat checkout atau jumlah pembelian bernilai nol.
